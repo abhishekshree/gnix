@@ -13,6 +13,7 @@ To list them, this repository has implementations of -
 - sleep
 - touch
 - whoami
+- grep (basic search)
 
 One can use the ```build.sh``` file to build all the files and store in the ```./build``` folder.
 

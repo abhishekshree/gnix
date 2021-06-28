@@ -2,7 +2,7 @@ GOC=go build
 
 .PHONY: all
 
-all: build ls cat cp dirname echo mkdir pwd sleep touch whoami
+all: build ls cat cp dirname echo mkdir pwd sleep touch whoami grep
 
 .PHONY: clean
 
@@ -41,3 +41,6 @@ sleep:
 
 whoami:
 	${GOC} -o build/whoami whoami.go
+
+grep:
+	${GOC} -o build/grep grep.go
