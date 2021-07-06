@@ -1,8 +1,6 @@
-GOC=go build 
-
 .PHONY: all
 
-all: build ls cat cp dirname echo mkdir pwd sleep touch whoami grep
+all: build comp-ls comp-cat comp-cp comp-dirname comp-echo comp-mkdir comp-pwd comp-sleep comp-touch comp-whoami comp-grep
 
 .PHONY: clean
 
@@ -12,35 +10,35 @@ clean:
 build:
 	mkdir -p build
 
-ls:
-	${GOC}  -o build/ls ls.go
+comp-ls:
+	go build -o build/ls ./ls/ls.go
 
-cat:
-	${GOC} -o build/cat cat.go
+comp-cat:
+	go build -o build/cat ./cat/cat.go
 
-echo:
-	${GOC} -o build/echo echo.go
+comp-echo:
+	go build -o build/echo ./echo/echo.go
 
-cp:
-	${GOC} -o build/cp cp.go
+comp-cp:
+	go build -o build/cp ./cp/cp.go
 
-dirname:
-	${GOC} -o build/dirname dirname.go
+comp-dirname:
+	go build -o build/dirname ./dirname/dirname.go
 
-touch:
-	${GOC} -o build/touch touch.go
+comp-touch:
+	go build -o build/touch ./touch/touch.go
 
-pwd:
-	${GOC} -o build/pwd pwd.go
+comp-pwd:
+	go build -o build/pwd ./pwd/pwd.go
 
-mkdir:
-	${GOC} -o build/mkdir mkdir.go
+comp-mkdir:
+	go build -o build/mkdir ./mkdir/mkdir.go
 
-sleep:
-	${GOC} -o build/sleep sleep.go
+comp-sleep:
+	go build -o build/sleep ./sleep/sleep.go
 
-whoami:
-	${GOC} -o build/whoami whoami.go
+comp-whoami:
+	go build -o build/whoami ./whoami/whoami.go
 
-grep:
-	${GOC} -o build/grep grep.go
+comp-grep:
+	go build -o build/grep ./grep/grep.go
